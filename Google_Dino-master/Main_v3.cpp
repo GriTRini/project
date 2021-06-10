@@ -180,8 +180,8 @@ int main()
     {
         //게임 시작시 초기화
         bool isJumping = false;
+        bool candoubleJumping = false;
         bool doubleJumping = false;
-        bool canDoubleJumping = true;
         bool isBottom = true;
         const int gravity = 3;
 
@@ -208,14 +208,15 @@ int main()
             //z키가 눌렸고
             if (GetKeyDown() == 'z') {
                 // 바닥이면 점프
-                if (isBottom) {
+                if (isBottom == 1) {
                     isJumping = true;
                     isBottom = false;
-                    canDoubleJumping = true;
+                    candoubleJumping = true;
                 // 점프중일때 한번 더 점프
-                } else if (canDoubleJumping) {
+                } else if (candoubleJumping == 1) {
                     doubleJumping = true;
                 }
+
             }
 
 
@@ -235,7 +236,7 @@ int main()
             {
                 dinoY = DINO_BOTTOM_Y;
                 isBottom = true;
-                canDoubleJumping = false;
+                doubleJumping = false;
             }
 
             //나무가 왼쪽으로 (x음수) 가도록하고
@@ -258,12 +259,14 @@ int main()
 
 
             //점프의 맨위를 찍으면 점프가 끝난 상황.
-            if (dinoY <= 19 && !doubleJumping)
-            {
+            if (dinoY <= 19 && !doubleJumping) {
                 isJumping = false;
-            } else if (dinoY <= 11 && doubleJumping) {
+            //2단 점프를 한번만 실행 가능함.
+            }else if (dinoY <= 11 && doubleJumping) {
                 doubleJumping = false;
+                candoubleJumping = false;
             }
+
 
             DrawDino(dinoY);		//draw dino
             DrawTree(treeX);		//draw Tree
@@ -281,7 +284,7 @@ int main()
 
             //(v2.0) 점수출력을 1초마다 해주는것이 아니라 항상 출력해주면서, 1초가 지났을때 ++ 해줍니다.
             GotoXY(22, 0);	//커서를 가운데 위쪽으로 옮긴다. 콘솔창이 cols=100이니까 2*x이므로 22정도 넣어줌
-            printf("Score : %d isBottom : %d canDoubleJumping : %d doubleJumping : %d", score, isBottom, canDoubleJumping, doubleJumping);	//점수 출력해줌.
+            printf("Score : %d isBottom : %d  isJumping : %d  candoubleJumping : %d doubleJumping : %d", score, isBottom, isJumping, candoubleJumping, doubleJumping);	//점수 출력해줌.
         }
 
         //(v2.0) 게임 오버 메뉴
