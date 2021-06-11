@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/user/Desktop/Github/project/Google_Dino-master/Main.cpp" "C:/Users/user/Desktop/Github/project/cmake-build-debug/CMakeFiles/Dino_v1.dir/Google_Dino-master/Main.cpp.obj"
+  "C:/GitHub/project/Google_Dino-master/Main.cpp" "C:/GitHub/project/cmake-build-debug/CMakeFiles/Dino_v1.dir/Google_Dino-master/Main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

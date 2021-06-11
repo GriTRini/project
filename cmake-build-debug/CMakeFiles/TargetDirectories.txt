@@ -1,5 +1,5 @@
-C:/Users/user/Desktop/Github/project/cmake-build-debug/CMakeFiles/Dino_v1.dir
-C:/Users/user/Desktop/Github/project/cmake-build-debug/CMakeFiles/Dino_v2.dir
-C:/Users/user/Desktop/Github/project/cmake-build-debug/CMakeFiles/Dino_v3.dir
-C:/Users/user/Desktop/Github/project/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/user/Desktop/Github/project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/GitHub/project/cmake-build-debug/CMakeFiles/Dino_v1.dir
+C:/GitHub/project/cmake-build-debug/CMakeFiles/Dino_v2.dir
+C:/GitHub/project/cmake-build-debug/CMakeFiles/Dino_v3.dir
+C:/GitHub/project/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/GitHub/project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\user\Desktop\Github\project
+CMAKE_SOURCE_DIR = C:\GitHub\project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\user\Desktop\Github\project\cmake-build-debug
+CMAKE_BINARY_DIR = C:\GitHub\project\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -96,14 +96,14 @@ clean: CMakeFiles/Dino_v3.dir/clean
 CMakeFiles/Dino_v1.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dino_v1.dir\build.make CMakeFiles/Dino_v1.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dino_v1.dir\build.make CMakeFiles/Dino_v1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Dino_v1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\GitHub\project\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Dino_v1"
 .PHONY : CMakeFiles/Dino_v1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Dino_v1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\GitHub\project\cmake-build-debug\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Dino_v1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\GitHub\project\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Dino_v1.dir/rule
 
 # Convenience name for target.
@@ -123,14 +123,14 @@ CMakeFiles/Dino_v1.dir/clean:
 CMakeFiles/Dino_v2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dino_v2.dir\build.make CMakeFiles/Dino_v2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dino_v2.dir\build.make CMakeFiles/Dino_v2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target Dino_v2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\GitHub\project\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target Dino_v2"
 .PHONY : CMakeFiles/Dino_v2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Dino_v2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\GitHub\project\cmake-build-debug\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Dino_v2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\GitHub\project\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Dino_v2.dir/rule
 
 # Convenience name for target.
@@ -150,14 +150,14 @@ CMakeFiles/Dino_v2.dir/clean:
 CMakeFiles/Dino_v3.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dino_v3.dir\build.make CMakeFiles/Dino_v3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Dino_v3.dir\build.make CMakeFiles/Dino_v3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target Dino_v3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\GitHub\project\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target Dino_v3"
 .PHONY : CMakeFiles/Dino_v3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Dino_v3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\GitHub\project\cmake-build-debug\CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Dino_v3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\user\Desktop\Github\project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\GitHub\project\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Dino_v3.dir/rule
 
 # Convenience name for target.

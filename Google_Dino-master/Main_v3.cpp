@@ -185,6 +185,9 @@ int main()
         bool isBottom = true;
         const int gravity = 3;
 
+        srand((unsigned)time(0));
+
+
         int dinoY = DINO_BOTTOM_Y;
         int treeX = TREE_BOTTOM_X;
         int treeY = TREE_BOTTOM_Y;
@@ -241,19 +244,18 @@ int main()
 
             //나무가 왼쪽으로 (x음수) 가도록하고
             //나무의 위치가 왼쪽 끝으로가면 다시 오른쪽 끝으로 소환.
-            treeX -= 1.03 * count;
+            treeX -= 2 ;
             if (treeX <= 0)
             {
                 treeX = TREE_BOTTOM_X;
-                count += 0.01;
             }
 
             //선인장이 왼쪽으로 (x음수) 가도록 하고
             //선인장의 위치가 왼쪽 끝으로 가면 다시 오른쪽 끝으로 소환환
-           cactusX -= count;
+           cactusX -= 3.5 ;
             if (cactusX <= 0) {
                 cactusX = CACTUS_BOTTOM_X;
-                count += 0.1;
+                count += 0.01;
             }
 
 

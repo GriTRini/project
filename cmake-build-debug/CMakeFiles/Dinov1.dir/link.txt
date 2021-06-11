@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2021.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Dinov1.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Dinov1.dir/objects.a @CMakeFiles\Dinov1.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Dinov1.dir/objects.a -Wl,--no-whole-archive -o Dinov1.exe -Wl,--out-implib,libDinov1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Dinov1.dir\linklibs.rsp
