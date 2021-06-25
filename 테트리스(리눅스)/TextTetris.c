@@ -122,7 +122,7 @@ static struct result
 	int hour;
 	int min;
 	int rank;
-}temp_result;
+}temp_result;		//실제 사용 이름
 
 int block_number = 0;  /*현재 블록 넘버 변수*/
 int next_block_number = 0; /*다음 블록 넘버 변수 */
@@ -132,6 +132,7 @@ int game = GAME_END; /*게임 상태 변수, 게임이 시작되거나 종료됨
 int best_point = 0; /* 게임 최고 점수를 알려주는 변수*/
 long point = 0; /* 현재 게임중 득점을 알려주는 변수 */
 
+// 함수
 int display_menu(void); /* 메뉴를 보여줌 */
 int init_tetris_table(void); /*테트리스판을 초기화 한다. 벽과 공간을 나눔*/
 int display_tetris_table(void); /* 현재의 테트리스판을 보여준다. 블록이 놓이고 쌓인 현재 상태를 보여줌*/
@@ -149,9 +150,10 @@ int main(void)
 {
 	int menu = 1;
 
+	// 참일때 루프 실행
 	while(menu)
 	{
-		menu = display_menu();
+		menu = display_menu();		//179줄
 
 		if(menu == 1)
 		{
@@ -206,7 +208,8 @@ int display_menu(void)
 	return 0;
 }
 
-/* 게임 시작시 호출되는 함수.   game변수를 참조하여 게임을 종료하거나 시작함 . 게임 시작시 refresh()함수가 콜백함수로 설정되고 타이머를 등록함. */
+// 게임 시작시 호출되는 함수.   game변수를 참조하여 게임을 종료하거나 시작함 . 
+// 게임 시작시 refresh()함수가 콜백함수로 설정되고 타이머를 등록함. 
 int game_start(void)
 {
 	static struct sigaction sa;
