@@ -2,7 +2,7 @@ import csv
 import matplotlib.pyplot as plt
 from tkinter import *
 from drawnow import *
-
+import folium
 import turtle
 
 # csv 파일 열기
@@ -13,8 +13,8 @@ al = open('project_estimator_global_position_0.csv')            # 고도
 
 # 헤더파일 출력
 print(csv.reader(l))
-location = csv.reader(l)
-header = next(location)
+position = csv.reader(l)
+header = next(position)
 print(header)
 
 print(csv.reader(a))
@@ -49,14 +49,14 @@ alt = []
 def head():
     turtle.shape('turtle')
     turtle.left(90)
-    turtle.turtlesize(20,20,1)
-    for row in location:
+    turtle.turtlesize(20, 20, 1)
+    for row in position:
         heading.append(float(row[21]))
     for i in range(0, len(heading)):
         print(float(heading[i]))
         if float(heading[i]) >= 0:
             if float(heading[i-1]) >= 0:
-                turtle.right(float(heading[i]) * 10 - float(heading[i-1]) * 10)
+                turtle.right((float(heading[i]) * 10) - (float(heading[i-1]) * 10))
             else:
                 turtle.left(float(heading[i-1]) * 10)
                 turtle.right(float(heading[i]) * 10)
@@ -67,19 +67,23 @@ def head():
             else:
                 turtle.right(((float(heading[i])) * 10) - ((float(heading[i-1])) * 10))
 
-# 경도 위도 그래프
-def showplot_Local():
-    plt.title('GPS Data')
-    plt.plot(lat, color='r', label='rat')
-    plt.plot(lon, color='b', label='lon')
-    plt.legend()
-
 # 경도 위도 데이터값
 def Local():
-    for row in location:
-        lat.append(float(row[3]))
-        lon.append(float(row[4]))
-        drawnow(showplot_Local)
+    local_map = folium.Map(location=[36.32150740022885, 127.41184443849869], zoom_start=15)
+
+    for row in position:
+        if row[3] != 'nan' or row[4] != 'nan':
+            lon = float(row[3])
+            lat = float(row[4])
+
+            maker = folium.Marker(location = [lon, lat])
+            maker.add_to(local_map)
+
+    local_map
+
+
+
+
 
 # 자이로 센서 그래프
 def showplot_Gyro():
