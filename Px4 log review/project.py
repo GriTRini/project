@@ -6,7 +6,7 @@ import folium
 import turtle
 
 # csv 파일 열기
-l = open('project_estimator_local_position_0.csv')              # GPS
+l = open('project_estimator_global_position_0.csv')              # GPS
 a = open('project_sensor_accel_0.csv')                          # 가속도
 g = open('project_sensor_gyro_0.csv')                           # 자이로
 al = open('project_estimator_global_position_0.csv')            # 고도
@@ -34,6 +34,7 @@ print(header)
 
 
 # 리스트 생성
+name = []
 lat = []
 lon = []
 heading = []
@@ -70,16 +71,21 @@ def head():
 # 경도 위도 데이터값
 def Local():
     local_map = folium.Map(location=[36.32150740022885, 127.41184443849869], zoom_start=15)
-
+    exlon = 0
+    exlat = 0
     for row in position:
-        if row[3] != 'nan' or row[4] != 'nan':
-            lon = float(row[3])
-            lat = float(row[4])
+        sub1 = abs(exlon - float(row[2]))
+        sub2 = abs(exlat - float(row[3]))
+        if sub1 > 0.001 or sub2 > 0.001:
+                lat = float(row[2])
+                lon = float(row[3])
 
-            maker = folium.Marker(location = [lon, lat])
-            maker.add_to(local_map)
+                maker = folium.Marker(location = [lat, lon])
+                maker.add_to(local_map)
+                local_map.save('local.html')
+                exlon = float(row[2])
+                exlat = float(row[3])
 
-    local_map
 
 
 
