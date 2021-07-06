@@ -57,16 +57,16 @@ def head():
         print(float(heading[i]))
         if float(heading[i]) >= 0:
             if float(heading[i-1]) >= 0:
-                turtle.right((float(heading[i]) * 10) - (float(heading[i-1]) * 10))
+                turtle.right((float(heading[i]) * 57.2958) - (float(heading[i-1]) * 57.2958))
             else:
-                turtle.left(float(heading[i-1]) * 10)
-                turtle.right(float(heading[i]) * 10)
+                turtle.left(float(heading[i-1]) * 57.2958)
+                turtle.right(float(heading[i]) * 57.2958)
         elif float(heading[i]) < 0:
             if float(heading[i-1]) >= 0:
-                turtle.left(float(heading[i-1]) * 10)
-                turtle.right(float(heading[i]) * 10)
+                turtle.left(float(heading[i-1]) * 57.2958)
+                turtle.right(float(heading[i]) * 57.2958)
             else:
-                turtle.right(((float(heading[i])) * 10) - ((float(heading[i-1])) * 10))
+                turtle.right(((float(heading[i])) * 57.2958) - ((float(heading[i-1])) * 57.2958))
 
 # 경도 위도 데이터값
 def Local():
